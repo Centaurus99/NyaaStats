@@ -20,7 +20,7 @@
 
 <script>
   import {mapState} from 'vuex'
-  import {isYesterday} from 'date-fns'
+  import {isYesterday, isToday} from 'date-fns'
 
   import Welcome from '@/components/welcome.vue'
   import SearchBox from '@/components/search-box'
@@ -52,7 +52,7 @@
       yesterdayPlayers () {
         return process.env.NODE_ENV === 'development'
           ? this.playerList.filter(p => p.playername.length <= 3 || p.playername.length >= 16)
-          : this.playerList.filter(p => isYesterday(p.seen))
+          : this.playerList.filter(p => isYesterday(p.seen) || isToday(p.seen))
       },
 
       keyword () {
