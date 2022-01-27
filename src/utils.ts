@@ -170,7 +170,7 @@ export default class Utils {
   }
 
   async getNameHistory (uuid: LongUuid): Promise<McNameHistory | null> {
-    const apiNameHistory = `https://api.mojang.com/user/profiles/${uuid}/names`
+    const apiNameHistory = config.get<string>('render.mojang') + `/user/profiles/${uuid}/names`
     let history
     try {
       history = await this.getMojangAPI<McNameHistory>(apiNameHistory)

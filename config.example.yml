@@ -24,6 +24,8 @@ render:
   render-banned: false
   # [Required] Crafatar service URL, used for player avatar/skin model generating
   crafatar: https://crafatar.com
+  # [Required] Mojang API URL
+  mojang: https://api.mojang.com
 
   # Output
 
