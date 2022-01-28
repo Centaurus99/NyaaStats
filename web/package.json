@@ -27,5 +27,8 @@
     "sass-loader": "^8.0.2",
     "tailwindcss": "^1.4.6",
     "vue-template-compiler": "^2.6.11"
+  },
+  "volta": {
+    "node": "12.18.0"
   }
 }
